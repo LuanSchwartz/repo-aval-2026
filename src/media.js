@@ -32,6 +32,10 @@ export function calcularMedia(notas) {
   return soma / notas.length;
 }
 
+export function formatarMedia(media) {
+  return media.toFixed(1).replace('.', ',');
+}
+
 /**
  * Retorna a situação do aluno de acordo com a média.
  *

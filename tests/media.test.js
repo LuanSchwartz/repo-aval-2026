@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { describe, test } from 'node:test';
-import { calcularMedia, obterSituacao } from '../src/media.js';
+import { calcularMedia, formatarMedia, obterSituacao } from '../src/media.js';
 
 describe('calcularMedia', () => {
   test('retorna a própria nota quando há apenas uma', () => {
@@ -37,6 +37,24 @@ describe('calcularMedia', () => {
 
   test('aceita a nota máxima 10', () => {
     assert.equal(calcularMedia([10]), 10);
+  });
+});
+
+describe('formatarMedia', () => {
+  test('formata 7.666666666666667 como 7,7', () => {
+    assert.equal(formatarMedia(7.666666666666667), '7,7');
+  });
+
+  test('formata 7 como 7,0', () => {
+    assert.equal(formatarMedia(7), '7,0');
+  });
+
+  test('formata 10 como 10,0', () => {
+    assert.equal(formatarMedia(10), '10,0');
+  });
+
+  test('arredonda 5.25 para 5,3', () => {
+    assert.equal(formatarMedia(5.25), '5,3');
   });
 });
 
