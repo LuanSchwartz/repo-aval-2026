@@ -19,6 +19,8 @@ Conventional Commits, merges, resolução de conflitos, versionamento e Pull Req
 | Nome | Usuário do GitHub |
 | ---- | ----------------- |
 
+| Luan Schwartz | LuanSchwartz |
+
 ## Sumário
 
 - [Sobre o projeto](#sobre-o-projeto)
